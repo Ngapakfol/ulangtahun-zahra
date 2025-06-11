@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #fceabb, #f8b500);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      animation: fadeIn 2s ease;
+    }
+    h1 {
+      color: #f39c12;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.imgur.com/igyPsGR.jpeg" alt="Foto Zahra">
+    <h1>Happy Level Up Zahra Nadya Putri</h1>
+    <p>
+      Selamat ulang tahun, Zahra Nadya Putri...<br/><br/>
+      Hari ini adalah hari spesialmu, dan aku ingin jadi bagian kecil dari kebahagiaanmu.<br/>
+      Mungkin aku bukan orang yang paling sering kamu pikirkan.<br/>
+      Mungkin aku hanya bayangan yang lewat di sela-sela harimu.<br/>
+      Tapi diam-diam, aku memperhatikanmu. Diam-diam, aku peduli.<br/><br/>
+      Aku nggak tahu kamu menganggap aku siapa.<br/>
+      Aku nggak tahu apakah kehadiranku cukup berarti.<br/>
+      Tapi yang aku tahu… setiap kamu tersenyum, ada bagian dari hatiku yang ikut hangat.<br/>
+      Setiap kamu bahagia, aku merasa ikut lega.<br/><br/>
+      Semoga ulang tahun ini jadi awal dari hal-hal baik yang kamu doakan.<br/>
+      Semoga hatimu selalu dikelilingi oleh orang-orang yang tulus.<br/>
+      Dan semoga… meski tak terlihat, kamu bisa merasakan satu hal:<br/>
+      Ada seseorang di sini, yang diam-diam selalu mendoakanmu. ??
+    </p>
+    <p style="margin-top: 30px; font-style: italic; color: #777;">By Sam??</p>
+  </div>
+
+  <!-- Musik jazz ulang tahun dari file lokal -->
+  <audio autoplay loop hidden>
+    <source src="happy-birthday-jazz-piano-style-117256.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
