@@ -17,6 +17,7 @@
       margin: 0;
       padding: 20px;
       text-align: center;
+      overflow: hidden;
     }
     .card {
       background: white;
@@ -55,23 +56,22 @@
 <body>
   <div class="card">
     <img src="https://i.imgur.com/igyPsGR.jpeg" alt="Foto Zahra">
-    <h1>Happy Level Up Zahra Nadya Putri</h1>
+    <h1>Happy Birthday Zahra Nadya Putri</h1>
     <p>
-      Selamat ulang tahun, Zahra Nadya Putri...<br><br>
-      Hari ini adalah hari spesialmu, dan aku ingin jadi bagian kecil dari kebahagiaanmu.<br>
-      Mungkin aku bukan orang yang paling sering kamu pikirkan.<br>
-      Mungkin aku hanya bayangan yang lewat di sela-sela harimu.<br>
-      Tapi diam-diam, aku memperhatikanmu. Diam-diam, aku peduli.<br><br>
-      Aku nggak tahu kamu menganggap aku siapa.<br>
-      Aku nggak tahu apakah kehadiranku cukup berarti.<br>
-      Tapi yang aku tahu… setiap kamu tersenyum, ada bagian dari hatiku yang ikut hangat.<br>
-      Setiap kamu bahagia, aku merasa ikut lega.<br><br>
-      Semoga ulang tahun ini jadi awal dari hal-hal baik yang kamu doakan.<br>
-      Semoga hatimu selalu dikelilingi oleh orang-orang yang tulus.<br>
-      Dan semoga… meski tak terlihat, kamu bisa merasakan satu hal:<br>
-      Ada seseorang di sini, yang diam-diam selalu mendoakanmu. 🌻
+      Hari ini bukan hanya tentang bertambahnya usia,  
+      tapi juga tentang kamu — Zahra yang hangat, baik, dan selalu menghadirkan tenang.  
+      Mungkin aku tidak selalu terlihat, tapi dari kejauhan aku mengagumimu.  
+      Tulus. Diam-diam. Tanpa syarat apa-apa. <br><br>
+
+      Aku tahu kamu perempuan kuat. Tapi semoga hari ini, kamu juga merasa dicintai,  
+      didoakan, dan dihargai. Karena kamu pantas.  
+      Pantas untuk hal-hal indah, pantas untuk hidup yang hangat, pantas untuk bahagia. <br><br>
+
+      Selamat ulang tahun.  
+      Semoga apapun yang kamu doakan dalam hati, pelan-pelan menjadi nyata.  
+      Semoga kamu tetap jadi Zahra yang penuh cahaya, dan dunia selalu lembut padamu.  
     </p>
-    <p style="margin-top: 30px; font-style: italic; color: #777;">— Dari Sam</p>
+    <p style="margin-top: 30px; font-style: italic; color: #777;">— dari Sam, yang bersyukur pernah mengenalmu 🌻</p>
     <button class="btn" onclick="document.getElementById('musik').play()">Putar Musik 🎵</button>
   </div>
 
@@ -81,31 +81,14 @@
   </audio>
 
   <!-- Efek bunga jatuh -->
-  <script src="https://cdn.jsdelivr.net/gh/lokesh-coder/pretty-sakura/pretty-sakura.min.js"></script>
+  <script src="https://unpkg.com/sakura-js@1.0.0/lib/sakura.min.js"></script>
   <script>
-    new Sakura('body', {
-      colors: [
-        {
-          gradientColorStart: '#fcc',
-          gradientColorEnd: '#f99',
-          gradientColorDegree: 120
-        }
-      ],
+    const sakura = new Sakura('body', {
       maxSize: 14,
       minSize: 9,
       fallSpeed: 1,
       delay: 300
     });
   </script>
-  <!-- Library Sakura.js -->
-<script src="https://unpkg.com/sakura-js@1.0.0/lib/sakura.min.js"></script>
-<script>
-  const sakura = new Sakura('body', {
-    maxSize: 14,
-    minSize: 9,
-    fallSpeed: 1,
-    delay: 300
-  });
-</script>
 </body>
 </html>
