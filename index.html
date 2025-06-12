@@ -59,15 +59,27 @@
       border-radius: 8px;
       cursor: pointer;
     }
+
+    canvas#confetti-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
+  <canvas id="confetti-canvas"></canvas>
+
   <div class="card">
     <img src="https://i.imgur.com/igyPsGR.jpeg" alt="Foto Zahra">
     <h1>Happy Birthday Zahra Nadya Putri</h1>
     <p>
       Hari ini bukan hanya tentang bertambahnya usia,<br>
-      tapi juga tentang kamu — Zahra yang hangat, baik, dan selalu menghadirkan tenang.<br>
+      tapi juga tentang kamu Zahra yang hangat, baik, dan selalu menghadirkan tenang.<br>
       Mungkin aku tidak selalu terlihat, tapi dari kejauhan aku mengagumimu.<br>
       Tulus. Diam-diam. Tanpa syarat apa-apa.<br><br>
       Aku tahu kamu perempuan kuat. Tapi semoga hari ini, kamu juga merasa dicintai,<br>
@@ -78,7 +90,7 @@
       Semoga kamu tetap jadi Zahra yang penuh cahaya, dan dunia selalu lembut padamu.
     </p>
     <p style="margin-top: 30px; font-style: italic; color: #777;">— dari Sam, yang bersyukur pernah mengenalmu 🌻</p>
-    <button class="btn" onclick="document.getElementById('musik').play()">Putar Musik 🎵</button>
+    <button class="btn" onclick="putarMusik()">Putar Musik 🎵</button>
   </div>
 
   <!-- Musik -->
@@ -87,9 +99,13 @@
     Browser Anda tidak mendukung audio HTML5.
   </audio>
 
-  <!-- Efek bunga jatuh (Sakura) -->
+  <!-- Sakura JS -->
   <script src="https://cdn.jsdelivr.net/npm/sakura-js@1.0.1/dist/sakura.min.js"></script>
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
   <script>
+    // Sakura
     window.onload = function () {
       new Sakura('body', {
         maxSize: 14,
@@ -97,7 +113,25 @@
         fallSpeed: 1,
         delay: 300
       });
+
+      // Confetti ketika halaman dibuka
+      confetti({
+        particleCount: 150,
+        spread: 90,
+        origin: { y: 0.6 }
+      });
     };
+
+    // Musik
+    function putarMusik() {
+      const audio = document.getElementById("musik");
+      audio.play();
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
   </script>
 </body>
 </html>
