@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ucapan ulang tahun untuk Zahra Nadya Putri dari Sam.">
+  <meta property="og:title" content="Selamat Ulang Tahun Zahra! 🎂">
+  <meta property="og:description" content="Dari Sam, yang bersyukur pernah mengenalmu 🌻">
+  <meta property="og:image" content="https://i.imgur.com/igyPsGR.jpeg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#f8b500">
   <title>Selamat Ulang Tahun Zahra</title>
   <style>
     body {
@@ -50,8 +56,13 @@
       font-size: 16px;
       border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #e67e22;
     }
   </style>
+  <link rel="icon" href="https://emoji.slack-edge.com/T02F66V3S/party_parrot/ef2b7afc6f8a5865.png">
 </head>
 <body>
   <div class="card">
@@ -59,7 +70,7 @@
     <h1>Happy Birthday Zahra Nadya Putri</h1>
     <p>
       Hari ini bukan hanya tentang bertambahnya usia,<br>
-      tapi juga tentang kamu Zahra yang hangat, baik, dan selalu menghadirkan tenang.<br>
+      tapi juga tentang kamu — Zahra yang hangat, baik, dan selalu menghadirkan tenang.<br>
       Mungkin aku tidak selalu terlihat, tapi dari kejauhan aku mengagumimu.<br>
       Tulus. Diam-diam. Tanpa syarat apa-apa.<br><br>
       Aku tahu kamu perempuan kuat. Tapi semoga hari ini, kamu juga merasa dicintai,<br>
@@ -70,11 +81,11 @@
       Semoga kamu tetap jadi Zahra yang penuh cahaya, dan dunia selalu lembut padamu.
     </p>
     <p style="margin-top: 30px; font-style: italic; color: #777;">— dari Sam, yang bersyukur pernah mengenalmu 🌻</p>
-    <button class="btn" onclick="document.getElementById('musik').play()">Putar Musik 🎵</button>
+    <button class="btn" onclick="putarMusik()">Putar Musik 🎵</button>
   </div>
 
   <!-- Musik -->
-  <audio id="musik" loop>
+  <audio id="musik" loop preload="auto">
     <source src="happy-birthday-jazz-piano-style-117256.mp3" type="audio/mpeg">
   </audio>
 
@@ -87,6 +98,14 @@
       fallSpeed: 1,
       delay: 300
     });
+
+    function putarMusik() {
+      const audio = document.getElementById('musik');
+      audio.volume = 0.7; // agar tidak terlalu keras
+      audio.play().catch(e => {
+        alert("Klik tombol untuk memutar musik karena browser membatasi autoplay.");
+      });
+    }
   </script>
 </body>
 </html>
