@@ -13,7 +13,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       padding: 20px;
       text-align: center;
@@ -40,6 +40,16 @@
       object-fit: cover;
       margin-bottom: 20px;
     }
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #f39c12;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -47,26 +57,45 @@
     <img src="https://i.imgur.com/igyPsGR.jpeg" alt="Foto Zahra">
     <h1>Happy Level Up Zahra Nadya Putri</h1>
     <p>
-      Selamat ulang tahun, Zahra Nadya Putri...<br/><br/>
-      Hari ini adalah hari spesialmu, dan aku ingin jadi bagian kecil dari kebahagiaanmu.<br/>
-      Mungkin aku bukan orang yang paling sering kamu pikirkan.<br/>
-      Mungkin aku hanya bayangan yang lewat di sela-sela harimu.<br/>
-      Tapi diam-diam, aku memperhatikanmu. Diam-diam, aku peduli.<br/><br/>
-      Aku nggak tahu kamu menganggap aku siapa.<br/>
-      Aku nggak tahu apakah kehadiranku cukup berarti.<br/>
-      Tapi yang aku tahu… setiap kamu tersenyum, ada bagian dari hatiku yang ikut hangat.<br/>
-      Setiap kamu bahagia, aku merasa ikut lega.<br/><br/>
-      Semoga ulang tahun ini jadi awal dari hal-hal baik yang kamu doakan.<br/>
-      Semoga hatimu selalu dikelilingi oleh orang-orang yang tulus.<br/>
-      Dan semoga… meski tak terlihat, kamu bisa merasakan satu hal:<br/>
-      Ada seseorang di sini, yang diam-diam selalu mendoakanmu. ??
+      Selamat ulang tahun, Zahra Nadya Putri...<br><br>
+      Hari ini adalah hari spesialmu, dan aku ingin jadi bagian kecil dari kebahagiaanmu.<br>
+      Mungkin aku bukan orang yang paling sering kamu pikirkan.<br>
+      Mungkin aku hanya bayangan yang lewat di sela-sela harimu.<br>
+      Tapi diam-diam, aku memperhatikanmu. Diam-diam, aku peduli.<br><br>
+      Aku nggak tahu kamu menganggap aku siapa.<br>
+      Aku nggak tahu apakah kehadiranku cukup berarti.<br>
+      Tapi yang aku tahu… setiap kamu tersenyum, ada bagian dari hatiku yang ikut hangat.<br>
+      Setiap kamu bahagia, aku merasa ikut lega.<br><br>
+      Semoga ulang tahun ini jadi awal dari hal-hal baik yang kamu doakan.<br>
+      Semoga hatimu selalu dikelilingi oleh orang-orang yang tulus.<br>
+      Dan semoga… meski tak terlihat, kamu bisa merasakan satu hal:<br>
+      Ada seseorang di sini, yang diam-diam selalu mendoakanmu. 🌻
     </p>
-    <p style="margin-top: 30px; font-style: italic; color: #777;">By Sam??</p>
+    <p style="margin-top: 30px; font-style: italic; color: #777;">— Dari Sam</p>
+    <button class="btn" onclick="document.getElementById('musik').play()">Putar Musik 🎵</button>
   </div>
 
-  <!-- Musik jazz ulang tahun dari file lokal -->
-  <audio autoplay loop hidden>
+  <!-- Musik -->
+  <audio id="musik" loop>
     <source src="happy-birthday-jazz-piano-style-117256.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- Efek bunga jatuh -->
+  <script src="https://cdn.jsdelivr.net/gh/lokesh-coder/pretty-sakura/pretty-sakura.min.js"></script>
+  <script>
+    new Sakura('body', {
+      colors: [
+        {
+          gradientColorStart: '#fcc',
+          gradientColorEnd: '#f99',
+          gradientColorDegree: 120
+        }
+      ],
+      maxSize: 14,
+      minSize: 9,
+      fallSpeed: 1,
+      delay: 300
+    });
+  </script>
 </body>
 </html>
