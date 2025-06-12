@@ -3,12 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ucapan ulang tahun untuk Zahra Nadya Putri dari Sam.">
-  <meta property="og:title" content="Selamat Ulang Tahun Zahra! 🎂">
-  <meta property="og:description" content="Dari Sam, yang bersyukur pernah mengenalmu 🌻">
-  <meta property="og:image" content="https://i.imgur.com/igyPsGR.jpeg">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#f8b500">
   <title>Selamat Ulang Tahun Zahra</title>
   <style>
     body {
@@ -23,8 +17,11 @@
       margin: 0;
       padding: 20px;
       text-align: center;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
     }
+
     .card {
       background: white;
       padding: 30px;
@@ -32,14 +29,18 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       max-width: 500px;
       animation: fadeIn 2s ease;
+      z-index: 10;
     }
+
     h1 {
       color: #f39c12;
     }
+
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+
     img {
       width: 150px;
       height: 150px;
@@ -47,6 +48,7 @@
       object-fit: cover;
       margin-bottom: 20px;
     }
+
     .btn {
       margin-top: 20px;
       padding: 10px 20px;
@@ -56,13 +58,8 @@
       font-size: 16px;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #e67e22;
     }
   </style>
-  <link rel="icon" href="https://emoji.slack-edge.com/T02F66V3S/party_parrot/ef2b7afc6f8a5865.png">
 </head>
 <body>
   <div class="card">
@@ -70,7 +67,7 @@
     <h1>Happy Birthday Zahra Nadya Putri</h1>
     <p>
       Hari ini bukan hanya tentang bertambahnya usia,<br>
-      tapi juga tentang kamu Zahra yang hangat, baik, dan selalu menghadirkan tenang.<br>
+      tapi juga tentang kamu — Zahra yang hangat, baik, dan selalu menghadirkan tenang.<br>
       Mungkin aku tidak selalu terlihat, tapi dari kejauhan aku mengagumimu.<br>
       Tulus. Diam-diam. Tanpa syarat apa-apa.<br><br>
       Aku tahu kamu perempuan kuat. Tapi semoga hari ini, kamu juga merasa dicintai,<br>
@@ -81,31 +78,26 @@
       Semoga kamu tetap jadi Zahra yang penuh cahaya, dan dunia selalu lembut padamu.
     </p>
     <p style="margin-top: 30px; font-style: italic; color: #777;">— dari Sam, yang bersyukur pernah mengenalmu 🌻</p>
-    <button class="btn" onclick="putarMusik()">Putar Musik 🎵</button>
+    <button class="btn" onclick="document.getElementById('musik').play()">Putar Musik 🎵</button>
   </div>
 
   <!-- Musik -->
-  <audio id="musik" loop preload="auto">
+  <audio id="musik" loop>
     <source src="happy-birthday-jazz-piano-style-117256.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio HTML5.
   </audio>
 
-  <!-- Efek bunga jatuh -->
+  <!-- Efek bunga jatuh (Sakura) -->
   <script src="https://cdn.jsdelivr.net/npm/sakura-js@1.0.1/dist/sakura.min.js"></script>
   <script>
-    const sakura = new Sakura('body', {
-      maxSize: 14,
-      minSize: 9,
-      fallSpeed: 1,
-      delay: 300
-    });
-
-    function putarMusik() {
-      const audio = document.getElementById('musik');
-      audio.volume = 0.7; // agar tidak terlalu keras
-      audio.play().catch(e => {
-        alert("Klik tombol untuk memutar musik karena browser membatasi autoplay.");
+    window.onload = function () {
+      new Sakura('body', {
+        maxSize: 14,
+        minSize: 9,
+        fallSpeed: 1,
+        delay: 300
       });
-    }
+    };
   </script>
 </body>
 </html>
